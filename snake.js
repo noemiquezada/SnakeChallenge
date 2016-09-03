@@ -22,4 +22,13 @@ function Snake() {
         fill(255);
         rect(this.x, this.y, scl, scl);
     }
+
+    this.eat = function(pos) {
+        var d = dist(this.x, this.y, pos.x, pos.y);
+        if (d < 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

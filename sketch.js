@@ -21,6 +21,10 @@ function draw() {
     s.update();
     s.show();
     
+    if (s.eat(food)) {
+        pickLocation();
+    }
+    
     stroke(255, 0, 100);
     fill(255, 0, 100);
     rect(food.x, food.y, scl, scl);
