@@ -1,12 +1,17 @@
 function Snake() {
     this.x = 0;
     this.y = 0;
-    this.xspeed = 1;
-    this.yspeed = 0;
+    this.xDirection = 1;
+    this.yDirection = 0;
+
+    this.direction = function(x,y) {
+        this.xDirection = x;
+        this.yDirection = y;
+    }
 
     this.update = function() {
-        this.x = this.x + this.xspeed;
-        this.y = this.y + this.yspeed;
+        this.x = this.x + this.xDirection;
+        this.y = this.y + this.yDirection;
     }
 
     this.show = function() {
