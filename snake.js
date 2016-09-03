@@ -18,6 +18,7 @@ function Snake() {
     }
 
     this.show = function() {
+        stroke(255);
         fill(255);
         rect(this.x, this.y, scl, scl);
     }
