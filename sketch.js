@@ -18,12 +18,15 @@ function pickLocation() {
 
 function draw() {
     background(51);
-    s.update();
-    s.show();
     
     if (s.eat(food)) {
+        console.log("I ate the food");
         pickLocation();
     }
+
+    s.death();
+    s.update();
+    s.show();
     
     stroke(255, 0, 100);
     fill(255, 0, 100);
